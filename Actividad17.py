@@ -66,7 +66,7 @@ def remove_coffee():
 def clean_list():
     while True:
         print("1. Si\n"
-              "2. No")
+              "2. No\n")
         clean = int(input("¿Desea eliminar la lista completa ingresada?"))
         if coffee:
             print("Ningun cafe ha sido agregado, ingrese uno primero.")
