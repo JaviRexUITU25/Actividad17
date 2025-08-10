@@ -88,4 +88,24 @@ def cleanlist():
         break
 
 def contarcafe():
-
+    while True:
+        if not contarcafe() in coffee:
+            print("No hay cafes agregados, ingrese uno primero.")
+        else:
+            try:
+                print("1. Si\n"
+                      "2. No")
+                count = int(input("¿Desea verificar que cafes se repiten?: "))
+                match count:
+                    case 1:
+                        print("Averiguando.... ")
+                        for lista in coffee:
+                            if lista.name.lower() == count:
+                                lista.count(MenuCafe)
+                                print(count)
+            except ValueError:
+                print("Ingrese un valor valido!")
+            except TypeError:
+                print("Ingrese el tipo de valor valido")
+            except Exception as e:
+                print("Un error inesperado ha pasado!")
