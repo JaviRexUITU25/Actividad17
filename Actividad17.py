@@ -109,3 +109,39 @@ def contarcafe():
                 print("Ingrese el tipo de valor valido")
             except Exception as e:
                 print("Un error inesperado ha pasado!")
+
+while True:
+    saludo()
+    print("1. Agregar cafe.\n"
+          "2. Mostrar la lista de cafe completa.\n"
+          "3. Eliminar cafe.\n"
+          "4. Limpiar la lista de cafe.\n"
+          "5. Contador de cafe.\n"
+          "6. Salir.\n")
+    option_user = int(input("Ingrese la opcion que desea ejecutar: "))
+    try:
+        match option_user:
+            case 1:
+                addcoffee()
+            case 2:
+                viewcoffee()
+            case 3:
+                removecoffee()
+            case 4:
+                cleanlist()
+            case 5:
+                contarcafe()
+            case 6:
+                print("Saliendo del progrma....")
+                print("Gracias por usar el programa!")
+                break
+            case _:
+                print("Ingrese una opcion valida.")
+    except ValueError:
+        print("Ingrese un valor valido.")
+    except TypeError:
+        print("Ingrese el tipo de valor valido.")
+    except Exception as e:
+        print("Un error inesperado ha pasado!")
+    finally:
+        print("Ejemplo pequeño del uso de clases en POO")
